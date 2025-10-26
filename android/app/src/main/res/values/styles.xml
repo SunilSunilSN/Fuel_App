@@ -3,13 +3,19 @@
         <item name="android:windowBackground">@color/white</item>
     </style>
 
+    <!-- Fullscreen splash theme -->
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <!-- Background (your splash_screen.xml with logo) -->
+        <item name="android:windowBackground">@drawable/splash_gradient</item>
+        <!-- Allow the window to draw content under the system bars -->
+        <!-- Make it fullscreen under notch/status/navigation -->
         <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <!-- Transparent bars for full coverage -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
 
+        <!-- Disable system preview (faster transition) -->
         <item name="android:windowDisablePreview">true</item>
-        
-        <item name="android:windowIsTranslucent">true</item> 
-        
-        </style>
+    </style>
 </resources>
